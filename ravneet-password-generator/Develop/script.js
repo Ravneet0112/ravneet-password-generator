@@ -1,33 +1,62 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(){
+
+
+
 
   console.log("You clicked the button");
 
   var length = prompt("Length of the password?");
-  var lowercase = promt("Do you want to include lower case");
-  var uppercase = promt("Do you want to include uppercase");
-  var symbol = promt("Do you want to include symbol");
-  var number = promt("Do you want to include number");
+
+  if (isNaN(length)) {
+    alert("Please enter an integer");
+  }
+
+
+  if (parseInt(length) < 8 || parseInt(length) > 128) {
+    alert ("Please enter number more than 8 or less than 128");
+    
+  }
+
+
+  var lower = prompt("Do you want to include lower case");
+  var upper = prompt("Do you want to include uppercase");
+  var symbol = prompt("Do you want to include symbol");
+  var number = prompt("Do you want to include number");
+ 
+  function generatePassword(lowercase, uppercase, symbol, number){
+
+  
 }
 
+const randomFunc = {
+  lowercase: getRandomLower,
+  /*upper: getRandomUpper,
+  number: getRandomNum,
+  symbol: getRandomSymbol,*/
+};
 
-const lowecaserEL = document.getElementById('lowercase');
+console.log(lowercase);
+
+
+// const lowecaserEL = document.getElementById('lowercase');
+/*
 const uppercaseEL = document.getElementById('lowercase');
 const numberEL = document.getElementById('lowercase');
 const symbolcaseEL = document.getElementById('lowercase');
 const lengthEL = document.getElementById('length');
+const resultEL = document.getElementById('result'); */
 
 // Write password to the #password input
 function writePassword() {
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-  var length = prompt("Length of the password?");
+  
 
 
-  passwordText.value = password;
+  
 
 
  /* function showResponse(passwordlength){
@@ -36,12 +65,6 @@ function writePassword() {
     console.log("Please enter a integer!");
   }}*/
 }
-const randomFunc = {
-  lower: getRandomLower,
-  upper: getRandomUpper,
-  number: getRandomNum,
-  symbol: getRandomSymbol
-};
 
 
   function getRandomLower(){
@@ -61,7 +84,7 @@ const randomFunc = {
     return String.fromCharCode(Math.floor(Math.random)* 26 + 65);
   }
 
-  function getRandomSymbol{
+  function getRandomSymbol(){
     //Upper case letters start from 65 to 96
     const symbols = '!@#$%^&*()_+{}[]<>?|/=-,.';
     return symbols[Math.floor(Math.random() * symbols.lenght)];
