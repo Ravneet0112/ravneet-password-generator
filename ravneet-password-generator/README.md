@@ -2,6 +2,19 @@
 
 ## Your Task
 
+Created a password generator website
+
+1. First when to click on generate password you will be asked about the length of password.
+2. Then you will be asked if you need a lower case letter in your password.
+3. Next confirmation will be if you need a upper case letter in your password.
+4. After that confirmation about symbol in password
+5. Last but not the least if user needs numbers in the generated password
+6. All the conditions will be the input for the for loop 
+7. If the conditions from 4 statements are true we will the output to the created result variable
+8. We will also have to parse the result according to the length defined in very prompt
+9. We will pass that result to writepassword function 
+10. Use the value of result to be displayed on the screen. 
+
 This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
 The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
@@ -22,7 +35,9 @@ WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
 WHEN prompted for password criteria
 THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
+WHEN prompted for the length of the password:
+
+
 THEN I choose a length of at least 8 characters and no more than 128 characters
 WHEN asked for character types to include in the password
 THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
