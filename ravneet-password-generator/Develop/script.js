@@ -45,6 +45,10 @@ function generatePassword() {
       result += (getRandomNum()); }
     }
 
+    if (lower === false && upper === false && symbol === false && number == false){
+      alert("Please select at least one condition");
+    }
+
     let generatedPassword = (result.slice(0, parseInt(length)));
     return generatedPassword;
     }
