@@ -21,7 +21,7 @@ function generatePassword() {
   var symbol = confirm("Do you want to include symbol");
   var number = confirm("Do you want to include number");
 
-  var result = '';
+  let result = '';
  
   for (var i =0; i<parseInt(length); i++){
    
@@ -29,29 +29,25 @@ function generatePassword() {
      // var lowercase = console.log(getRandomLower());
       result += (getRandomLower());
       }
-      
-  
-   
+       
     if (upper === true) {
      // var uppercase = console.log(getRandomUpper()); 
       result += (getRandomUpper());
        }
-       
-  
-    
+        
     if (symbol === true) {
       //var symbolcase = console.log(getRandomSymbol()); 
       result += (getRandomSymbol());
     }
-    
     
     if (number === true) {
       //var numbercase = console.log(getRandomNum());
       result += (getRandomNum()); }
     }
 
-    return(console.log(result.slice(0, parseInt(length))));
-  }
+    let generatedPassword = (result.slice(0, parseInt(length)));
+    return generatedPassword;
+    }
 
 
    //function getresult(lowercase, uppercase, symbolcase, numbercase) {}
@@ -70,22 +66,11 @@ function generatePassword() {
       }
   }
 
-
- 
-
-
 /*const randomFunc = {
   lower: getRandomLower(),
   /*upper: getRandomUpper,
   number: getRandomNum,
   symbol: getRandomSymbol,}*/
-
-
-
-
-
-
-
 
 // const lowecaserEL = document.getElementById('lowercase');
 /*
@@ -97,8 +82,8 @@ const resultEL = document.getElementById('result'); */
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
@@ -128,10 +113,6 @@ function writePassword() {
     const symbols = '!@#$%^&*()_+{}[]<>?|/=-,.';
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
-
-  
- 
-
 
 
 // Add event listener to generate button
