@@ -15,36 +15,53 @@ function generatePassword() {
     alert ("Please enter number more than 8 or less than 128");   
     return; 
   }
+
+  var lower = confirm("Do you want to include lower case");
+  var upper = confirm("Do you want to include uppercase");
+  var symbol = confirm("Do you want to include symbol");
+  var number = confirm("Do you want to include number");
+
+  var result = '';
  
   for (var i =0; i<parseInt(length); i++){
-    var lower = confirm("Do you want to include lower case");
+   
     if(lower === true) {
-      var lowercase = console.log(getRandomLower());
+     // var lowercase = console.log(getRandomLower());
+      result += (getRandomLower());
       }
-  
-    var upper = confirm("Do you want to include uppercase");
-    if (upper === true) {
-      var uppercase = console.log(getRandomUpper()); 
-       }
-  
-    var symbol = confirm("Do you want to include symbol");
-    if (symbol === true) {
-      var symbolcase = console.log(getRandomSymbol()); 
       
+  
+   
+    if (upper === true) {
+     // var uppercase = console.log(getRandomUpper()); 
+      result += (getRandomUpper());
+       }
+       
+  
+    
+    if (symbol === true) {
+      //var symbolcase = console.log(getRandomSymbol()); 
+      result += (getRandomSymbol());
     }
     
-    var number = confirm("Do you want to include number");
+    
     if (number === true) {
-      var numbercase = console.log(getRandomNum()); }
+      //var numbercase = console.log(getRandomNum());
+      result += (getRandomNum()); }
+    }
+
+    return(console.log(result.slice(0, parseInt(length))));
+  }
 
 
    //function getresult(lowercase, uppercase, symbolcase, numbercase) {}
-      let generatedPassword = '';
+      /*let generatedPassword = '';
 
       const typesCount = lower + upper + number + symbol;
 
       const typeArr = [ lower , upper , number , symbol ]
-      .filter(item => Object.values(item)[1]);
+      console.log(typesCount)
+      .filter(item => Object.values(item)[0]);
       console.log('typeArr ', typeArr);
 
       if (typesCount === 0){
@@ -53,7 +70,7 @@ function generatePassword() {
       }
   }
 
-}
+
  
 
 
@@ -83,7 +100,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-
+  passwordText.value = password;
 }
 
 
