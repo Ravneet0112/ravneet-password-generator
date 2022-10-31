@@ -8,6 +8,7 @@ function generatePassword() {
 
   if (isNaN(length)) {
     alert("Please enter an integer");
+    return;
   }
 
 
