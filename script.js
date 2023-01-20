@@ -54,37 +54,6 @@ function generatePassword() {
     return generatedPassword;
     }
 
-
-   //function getresult(lowercase, uppercase, symbolcase, numbercase) {}
-      /*let generatedPassword = '';
-
-      const typesCount = lower + upper + number + symbol;
-
-      const typeArr = [ lower , upper , number , symbol ]
-      console.log(typesCount)
-      .filter(item => Object.values(item)[0]);
-      console.log('typeArr ', typeArr);
-
-      if (typesCount === 0){
-        return '';
-      
-      }
-  }
-
-/*const randomFunc = {
-  lower: getRandomLower(),
-  /*upper: getRandomUpper,
-  number: getRandomNum,
-  symbol: getRandomSymbol,}*/
-
-// const lowecaserEL = document.getElementById('lowercase');
-/*
-const uppercaseEL = document.getElementById('lowercase');
-const numberEL = document.getElementById('lowercase');
-const symbolcaseEL = document.getElementById('lowercase');
-const lengthEL = document.getElementById('length');
-const resultEL = document.getElementById('result'); */
-
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
