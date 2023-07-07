@@ -9,3 +9,5 @@ This app can be used to generate a random password. Users have option to have lo
 For live view, please click the link below:
 
 https://ravneet0112.github.io/ravneet-password-generator/
+
+https://ravneet0112.github.io/ravneet-password-generator/
